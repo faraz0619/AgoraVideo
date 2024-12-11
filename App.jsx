@@ -1,11 +1,14 @@
 import React from 'react';
-import { AuthProvider } from './src/contextAPI/AuthContext';
+import {AuthProvider} from './src/contextAPI/AuthContext';
+import {AppStateProvider} from './src/contextAPI/AppStateProvider';
 import Routes from './src/navigation/Routes';
 
 const App = () => {
   return (
     <AuthProvider>
-      <Routes />
+      <AppStateProvider>
+        <Routes />
+      </AppStateProvider>
     </AuthProvider>
   );
 };
